@@ -9,7 +9,7 @@ import { useSearchHeroes } from "@/heroes/hooks/useSearchHeroes";
 export const SearchPage = () => {
   const [searchParams] = useSearchParams();
   const name = searchParams.get("name") ?? "";
-  const queryStrength = searchParams.get("strength") ?? "0";
+  const queryStrength = searchParams.get("strength") ?? "1";
   const { data: heroesSearch } = useSearchHeroes(name, queryStrength);
 
   if (!heroesSearch) {
